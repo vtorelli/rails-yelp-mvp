@@ -1,5 +1,8 @@
 <div class="container">
-  <h1>Restaurant Index</h1>
+  <h1>Restaurants</h1>
+
+  <p><%= link_to "Create new restaurant", new_restaurant_path %></p>
+
     <div class="restaurants">
      <ul class="list-group">
       <% @restaurants.each do |restaurant| %>

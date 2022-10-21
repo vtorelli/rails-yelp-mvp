@@ -5,5 +5,15 @@
   <p> <i class="fa-solid fa-phone"></i> <%= @restaurant.phone_number %></p>
   <p> <i class="fa-solid fa-utensils"></i> <%= @restaurant.category %></p>
 
+  <p><%= link_to "Edit this restaurant", edit_restaurant_path %></p>
+  <p><%= link_to "add a review", new_restaurant_review_path(@restaurant) %></p>
+
+  <dl class="list-group">
+    <% @reviews.each do |review| %>
+      <dt class=""> <%= review.rating %> </dt>
+      <dd> <%= review.content %> </dd>
+    <% end %>
+  </dl>
+
 
 </div>
